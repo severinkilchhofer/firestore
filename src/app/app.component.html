@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="title" name="title" placeholder="Titel..">
+<textarea [(ngModel)]="content" name="content" placeholder="Text.."></textarea>
+<input type="submit" value="Add a Post" (click)="addPost()">
+
+<ul *ngFor="let post of posts | async">
+  <li>
+    <strong>{{ post.title}}</strong>
+    <br>
+    {{post.content}}
+  </li>
+</ul>
